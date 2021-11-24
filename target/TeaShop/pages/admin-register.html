@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商家注册</title>
+    <link rel="stylesheet" href="../static/bootstrap-3.4.1-dist/css/bootstrap.css">
+    <script src="../static/bootstrap-3.4.1-dist/js/bootstrap.js"></script>
+    <script src="../static/JQuery/jquery-3.6.0.min.js"></script>
+    <style>
+        html {
+            height: 100%;
+            width: 100%;
+        }
+
+        body {
+            margin: 0;
+            height: 100%;
+            width: 100%;
+            /*background-color: #dda520;*/
+            background-color: #faebd7;
+        }
+
+        .d1 {
+            height: 100%;
+            width: 100%;
+        }
+
+        .logo {
+            text-align: center;
+        }
+
+        .head-logo {
+            height: 100px;
+        }
+
+        .body {
+            /*background-image: url("../static/img/bg/6.jpg");*/
+            height: 80%;
+            background-color: #2f4f4f;
+        }
+
+        .body .container {
+            position: relative;
+            top: 18%;
+            text-align: center;
+        }
+
+        .right {
+            margin: 0 auto;
+        }
+
+        form {
+            border: 1px solid black;
+            background-color: white;
+            border-radius: 10px;
+            height: 350px;
+            padding: 33px 0;
+        }
+
+        .form-item {
+            color: black;
+            margin: 10px;
+        }
+
+        .btn {
+            margin: 40px;
+        }
+
+        .bottom {
+            position: absolute;
+            bottom: 0;
+            left: 100px;
+            font-size: 1em;
+            font-weight: inherit;
+        }
+    </style>
+</head>
+<body>
+<div class="d1">
+    <!--logo-->
+    <div class="head">
+        <div class="logo">
+            <div class="container">
+                <a href="../index.jsp"><img src="../static/img/logo.png" alt="logo" class="head-logo"></a>
+            </div>
+        </div>
+    </div>
+    <!--    主体部分-->
+    <div class="body">
+        <div class="container">
+            <div class="right row">
+                <div class="col-md-4 col-md-offset-4">
+                    <form action="../AdminRegistServlet" class="form" method="post" onsubmit='return judge()'>
+                        <div class="form-item">
+                            <label for="username" class="">账&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号</label>
+                            <input type="text" class="" id="username" name="username" autocomplete=”off”
+                                   placeholder="请输入账号">
+                        </div>
+                        <div class="form-item">
+                            <label for="password" class="">密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码</label>
+                            <input type="password" class="" id="password" name="password" autocomplete="new-password"
+                                   placeholder="请输入密码">
+                        </div>
+                        <div class="form-item">
+                            <label for="password-confirm" class="">确认密码</label>
+                            <input type="password" class="" id="password-confirm" name="password-confirm"
+                                   autocomplete="new-password"
+                                   placeholder="请确认密码">
+                        </div>
+                        <div class="form-item">
+                            <label for="tel" class="">手&nbsp;&nbsp;机&nbsp;&nbsp;号</label>
+                            <input type="tel" class="" id="tel" name="tel" autocomplete="off"
+                                   placeholder="请输入手机号">
+                        </div>
+                        <div class="form-item">
+                            <label for="email" class="">邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱</label>
+                            <input type="email" class="" id="email" name="email" autocomplete="off"
+                                   placeholder="请输入邮箱">
+                        </div>
+                        <div class="form-item">
+                            <button type="submit" class="btn btn-success" style="background: #7ffc7f">注册</button>
+                            <button type="reset" class="btn btn-warning" style="background: #9d9d9d">重置</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom container">
+        <span>copyright &copy; 2021 Tee Inc. 保留所有权利。</span>
+    </div>
+</div>
+<script>
+    function judge() {
+        var pwd = document.getElementById("password").value;
+        var pwdf = document.getElementById("password-confirm").value;
+        if (pwd == "" || pwdf == "") {
+            window.alert("密码不能为空！");
+            return false;
+        } else if (pwd == pwdf) {
+            return true;
+        } else {
+            window.alert("输入密码不一致，请重新确认输入！");
+            return false;
+        }
+    }
+</script>
+</body>
+</html>
