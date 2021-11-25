@@ -5,6 +5,9 @@ import com.tee.dao.impl.UserDaoImpl;
 import com.tee.pojo.AdminUser;
 import com.tee.pojo.User;
 import com.tee.service.UserService;
+
+import java.util.List;
+
 /**
  * @author Xing
  * date 2021-11-21-12-00
@@ -43,9 +46,9 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public boolean existAdminUser(String username) {
-        if (userDao.queryAdminUserByUsername(username)==null){
+        if (userDao.queryAdminUserByUsername(username) == null) {
             return false;
-        }else {
+        } else {
             return true;
         }
     }
@@ -58,5 +61,30 @@ public class UserServiceImpl implements UserService {
     @Override
     public void modifyAdminData(AdminUser adminUser) {
         userDao.modifyAdminUserData(adminUser);
+    }
+
+    @Override
+    public User searchUserByUserName(String userName) {
+        return userDao.queryUserByUsername(userName);
+    }
+
+    @Override
+    public User searchUserByUserId(String userId) {
+        return userDao.queryUserByUserId(userId);
+    }
+
+    @Override
+    public List<User> showAllUsers() {
+        return userDao.showAllUsers();
+    }
+
+    @Override
+    public void modifyUserPassword(String id,String password) {
+        userDao.modifyPassword(id,password);
+    }
+
+    @Override
+    public void modifyAdminPassword(String id,String password) {
+        userDao.modifyAdminPassword(id,password);
     }
 }

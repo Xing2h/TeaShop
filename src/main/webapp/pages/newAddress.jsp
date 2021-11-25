@@ -246,8 +246,8 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                            aria-expanded="false">我的账户</a>
                         <ul class="dropdown-menu">
-                            <li><a href="persondata.jsp">我的信息</a></li>
-                            <li><a href="#">我的订单</a></li>
+                            <li><a href="credit.jsp">我的信息</a></li>
+                            <li><a href="order.jsp">我的订单</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -261,22 +261,22 @@
             </div>
         </div>
         <%--        表单--%>
-        <form action="../AddAddressServlet" style="width: 500px;margin: 0 auto;">
+        <form action="../AddAddressServlet" style="width: 500px;margin: 0 auto;" method="post">
             <div class="form-group">
                 <label for="name">收件人姓名</label>
-                <input type="text" class="form-control" id="name" placeholder="请输入收件人姓名">
+                <input type="text" class="form-control" id="name" name="name" placeholder="请输入收件人姓名">
             </div>
             <div class="form-group">
                 <label for="tel">收件人电话</label>
-                <input type="text" class="form-control" id="tel" placeholder="请输入收件人电话">
+                <input type="text" class="form-control" id="tel" name="tel" placeholder="请输入收件人电话">
             </div>
             <div class="form-group">
                 <label for="address">收件人地址</label>
-                <input type="text" class="form-control" id="address" placeholder="请输入收件人地址">
+                <input type="text" class="form-control" id="address" name="address" placeholder="请输入收件人地址">
             </div>
             <div class="form-group">
                 <label for="post">邮政编码</label>
-                <input type="text" class="form-control" id="post" placeholder="请输入邮政编码">
+                <input type="text" class="form-control" id="post" name="post" placeholder="请输入邮政编码">
             </div>
             <button type="submit" class="btn btn-danger" style="margin: 0 209px;">确认</button>
         </form>

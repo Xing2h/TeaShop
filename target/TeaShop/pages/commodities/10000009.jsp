@@ -338,8 +338,8 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                        aria-expanded="false">我的账户</a>
                     <ul class="dropdown-menu">
-                        <li><a href="../login_success.jsp">我的信息</a></li>
-                        <li><a href="#">我的订单</a></li>
+                        <li><a href="../credit.jsp">我的信息</a></li>
+                        <li><a href="../order.jsp">我的订单</a></li>
                         <!--                            <li><a href="#">Something else here</a></li>-->
                         <!--                            <li role="separator" class="divider"></li>-->
                         <!--                            <li><a href="#">Separated link</a></li>-->
@@ -403,6 +403,17 @@
             </div>
         </div>
         <!--底部信息栏-->
+        <%--        <hr class="zw">--%>
+        <%--        <footer>--%>
+        <%--            <p class="pull-right">--%>
+        <%--                <a href="#">返回顶部</a>--%>
+        <%--            </p>--%>
+        <%--            <p class="pull-left">--%>
+        <%--                © 2021 Company, Inc.--%>
+        <%--            </p>--%>
+        <%--        </footer>--%>
+    </div>
+    <div class="container" style="position: absolute;bottom: 0;margin: 0 0 0 375px">
         <hr class="zw">
         <footer>
             <p class="pull-right">
@@ -414,7 +425,7 @@
         </footer>
     </div>
 </div>
-<form id="form" method="post" action="../../AddCartServlet" style="width: 0;height: 0;visibility: hidden" >
+<form id="form" method="post" action="../../AddCartServlet" style="width: 0;height: 0;visibility: hidden">
     <input type="text" id="id" name="cid">
     <input type="text" id="cnum" name="cnum">
 </form>
@@ -453,24 +464,25 @@
         var cid = document.getElementById("cid").value;
         //获取商品数量
         var cnum = document.getElementById('num').value;
-        document.getElementById("id").value=cid;
-        document.getElementById("cnum").value=cnum;
+        document.getElementById("id").value = cid;
+        document.getElementById("cnum").value = cnum;
         document.getElementById("form").submit();
     });
     //返回调用
-    $(function (){
+    $(function () {
         var returndata = '${add}';
-        if (returndata==="success"){
+        if (returndata === "success") {
             window.alert("添加购物车成功");
             <%
                 session.removeAttribute("add");
             %>
-        }else if (returndata==="fail"){
+        } else if (returndata === "fail") {
             <%
                 session.removeAttribute("add");
             %>
             window.alert("添加购物车失败");
-        };
+        }
+        ;
     })
 
 </script>

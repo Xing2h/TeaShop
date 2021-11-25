@@ -19,10 +19,10 @@ public interface AddressDao {
 
     /**
      * 通过用户名查询收件人地址
-     * @param userId
+     * @param uid
      * @return
      */
-    public List<Address> queryAddressByUserId(String userId);
+    public List<Address> queryAddressByUserId(String uid);
 
     /**
      * 修改收件人信息
@@ -30,4 +30,11 @@ public interface AddressDao {
      * @return
      */
     public int modifyAddress(Address address);
+
+    /**
+     * 通过地址编号查询地址
+     * @param addressId
+     * @return
+     */
+    public Address searchAddressByAddressId(String addressId);
 }

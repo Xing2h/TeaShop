@@ -335,8 +335,8 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                        aria-expanded="false">我的账户</a>
                     <ul class="dropdown-menu">
-                        <li><a href="../login_success.jsp">我的信息</a></li>
-                        <li><a href="#">我的订单</a></li>
+                        <li><a href="../credit.jsp">我的信息</a></li>
+                        <li><a href="../order.jsp">我的订单</a></li>
                         <!--                            <li><a href="#">Something else here</a></li>-->
                         <!--                            <li role="separator" class="divider"></li>-->
                         <!--                            <li><a href="#">Separated link</a></li>-->
@@ -400,6 +400,17 @@
             </div>
         </div>
         <!--底部信息栏-->
+<%--        <hr class="zw">--%>
+<%--        <footer>--%>
+<%--            <p class="pull-right">--%>
+<%--                <a href="#">返回顶部</a>--%>
+<%--            </p>--%>
+<%--            <p class="pull-left">--%>
+<%--                © 2021 Company, Inc.--%>
+<%--            </p>--%>
+<%--        </footer>--%>
+    </div>
+    <div class="container" style="position: absolute;bottom: 0;margin: 0 0 0 375px">
         <hr class="zw">
         <footer>
             <p class="pull-right">

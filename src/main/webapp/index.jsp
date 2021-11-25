@@ -192,21 +192,26 @@
         h2 a:hover {
             text-decoration: none;
         }
-        .dcart{
+
+        .dcart {
             width: 300px;
         }
-        .dcart li{
+
+        .dcart li {
             /*display: flex;*/
-            height:120px;
+            height: 120px;
             margin: 30px 10px;
         }
-        .img{
+
+        .img {
             vertical-align: middle;
         }
-        .img img{
+
+        .img img {
             width: 100px;
         }
-        .dcart li div{
+
+        .dcart li div {
             text-align: center;
         }
     </style>
@@ -258,8 +263,8 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                            aria-expanded="false">我的账户</a>
                         <ul class="dropdown-menu">
-                            <li><a href="pages/persondata.jsp">我的信息</a></li>
-                            <li><a href="#">我的订单</a></li>
+                            <li><a href="pages/credit.jsp">我的信息</a></li>
+                            <li><a href="pages/order.jsp">我的订单</a></li>
                         </ul>
                     </li>
                 </ul>

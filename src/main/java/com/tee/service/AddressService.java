@@ -29,4 +29,11 @@ public interface AddressService {
      * @param address
      */
     public void modifyAddress(Address address);
+
+    /**
+     * 通过地址编号查询地址信息
+     * @param addressId
+     * @return
+     */
+    public Address searchAddressByAddressId(String addressId);
 }

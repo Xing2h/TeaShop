@@ -8,7 +8,8 @@ import com.tee.service.AddressService;
 import java.util.List;
 
 public class AddressServiceImpl implements AddressService {
-    AddressDao addressDao= new AddressDaoImpl();
+    AddressDao addressDao = new AddressDaoImpl();
+
     @Override
     public void createAddress(Address address) {
         addressDao.createAddress(address);
@@ -27,5 +28,10 @@ public class AddressServiceImpl implements AddressService {
     @Override
     public void modifyAddress(Address address) {
         addressDao.modifyAddress(address);
+    }
+
+    @Override
+    public Address searchAddressByAddressId(String addressId) {
+        return addressDao.searchAddressByAddressId(addressId);
     }
 }

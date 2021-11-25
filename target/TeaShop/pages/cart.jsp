@@ -251,8 +251,8 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                            aria-expanded="false">我的账户</a>
                         <ul class="dropdown-menu">
-                            <li><a href="persondata.jsp">我的信息</a></li>
-                            <li><a href="#">我的订单</a></li>
+                            <li><a href="credit.jsp">我的信息</a></li>
+                            <li><a href="order.jsp">我的订单</a></li>
                         </ul>
                     </li>
                 </ul>

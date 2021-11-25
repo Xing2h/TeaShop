@@ -24,15 +24,15 @@ public class AdminLoginServlet extends HttpServlet {
         String password = req.getParameter("password");
 
         AdminUser loginUser = userService.loginAdminUser(new AdminUser(null, username, password, null, null));
-        if (loginUser==null){
+        if (loginUser == null) {
             //登陆失败
             resp.sendRedirect("pages/admin-log.jsp");
-        }else {
+        } else {
             //登陆成功
             System.out.println(loginUser.toString());
             //把登录信息存到session
             req.getSession().setAttribute("adminUser", loginUser);
-            resp.sendRedirect("pages/admin-log.jsp");
+            resp.sendRedirect("pages/control/admin.jsp");
         }
     }
 }

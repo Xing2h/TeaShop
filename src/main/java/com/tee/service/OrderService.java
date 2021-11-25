@@ -28,6 +28,14 @@ public interface OrderService {
     public List<Order> searchOrder(String orderId);
 
     /**
+     * 查询用户所有订单
+     *
+     * @param userId
+     * @return
+     */
+    public List<Order> searchAllOrder(String userId);
+
+    /**
      * 通过用户id和订单号，查询订单
      *
      * @param userId  用户订单
@@ -38,8 +46,16 @@ public interface OrderService {
 
     /**
      * 生成订单号
+     *
      * @param userId
      * @return
      */
     public String createOrderId(String userId);
+
+    /**
+     * 生成订单时间
+     *
+     * @return
+     */
+    public String createOrderTime();
 }

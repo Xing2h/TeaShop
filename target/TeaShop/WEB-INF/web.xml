@@ -80,4 +80,40 @@
     <servlet-name>AddAddressServlet</servlet-name>
     <url-pattern>/AddAddressServlet</url-pattern>
   </servlet-mapping>
+<!--    新建订单-->
+    <servlet>
+        <servlet-name>AddOrderServlet</servlet-name>
+        <servlet-class>com.tee.servlet.AddOrderServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddOrderServlet</servlet-name>
+        <url-pattern>/AddOrderServlet</url-pattern>
+    </servlet-mapping>
+<!--    修改用户密码-->
+    <servlet>
+        <servlet-name>ModifyPasswordServlet</servlet-name>
+        <servlet-class>com.tee.servlet.ModifyPasswordServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ModifyPasswordServlet</servlet-name>
+        <url-pattern>/ModifyPasswordServlet</url-pattern>
+    </servlet-mapping>
+<!--    修改管理员密码-->
+    <servlet>
+        <servlet-name>ModifyAdminPasswordServlet</servlet-name>
+        <servlet-class>com.tee.servlet.ModifyAdminPasswordServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ModifyAdminPasswordServlet</servlet-name>
+        <url-pattern>/ModifyAdminPasswordServlet</url-pattern>
+    </servlet-mapping>
+<!--    修改管理员信息-->
+    <servlet>
+        <servlet-name>AdminDataModifyServlet</servlet-name>
+        <servlet-class>com.tee.servlet.AdminDataModifyServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminDataModifyServlet</servlet-name>
+        <url-pattern>/AdminDataModifyServlet</url-pattern>
+    </servlet-mapping>
 </web-app>

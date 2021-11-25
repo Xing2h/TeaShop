@@ -322,7 +322,7 @@
                        aria-expanded="false">我的账户</a>
                     <ul class="dropdown-menu">
                         <li><a href="../../login_success.jsp">我的信息</a></li>
-                        <li><a href="#">我的订单</a></li>
+                        <li><a href="../../order.jsp">我的订单</a></li>
                         <!--                            <li><a href="#">Something else here</a></li>-->
                         <!--                            <li role="separator" class="divider"></li>-->
                         <!--                            <li><a href="#">Separated link</a></li>-->

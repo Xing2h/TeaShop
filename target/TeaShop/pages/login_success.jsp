@@ -22,6 +22,25 @@
     </div>
 </form>
 <script>
+    window.onload = function () {
+        var l1 = document.getElementById("login");
+        var l2 = document.getElementById("register");
+        var l3 = document.getElementById("user")
+        if ('${user.username}' == '') {
+            l3.style.visibility = "hidden";
+            l3.style.width = 0;
+            l3.style.height = 0;
+        } else {
+            l1.style.visibility = "hidden";
+            l1.style.width = 0;
+            l1.style.height = 0;
+            l2.style.visibility = "hidden";
+            l2.style.width = 0;
+            l2.style.height = 0;
+        }
+    }
+</script>
+<script>
     var name = '${user.username}';
     var id = '${user.id}';
     window.alert(name);

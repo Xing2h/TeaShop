@@ -93,28 +93,37 @@ values ('10002', '10000003', '黄金芽礼盒装茶叶', '3', '418');
 # 创建订单表
 create table t_order
 (
-    oid     int primary key not null,
-    otime   date            not null,
-    uid     int             not null,
-    aid     int             not null,
-    cid     int             not null,
-    cname   varchar(20)     not null,
-    cnum    int             not null,
-    tprice  float           not null,
-    ostatus varchar(20)
+    orderId       varchar(100) not null,
+    orderTime     date         not null,
+    userId        int          not null,
+    addressId     int          not null,
+    commodityId   int          not null,
+    commodityName varchar(20)  not null,
+    num           int          not null,
+    totalPrice    float        not null,
+    orderStatus   varchar(20)
 );
 # 插入订单数据
-
+insert into t_order(orderId, orderTime, userId, addressId, commodityId, commodityName, num, totalPrice, orderStatus)
+VALUES ('20211125123400', '2021-05-18 00:00:00', '10002', '2', '10000001', '明前龙井', '1', '299', 'false');
+insert into t_order(orderId, orderTime, userId, addressId, commodityId, commodityName, num, totalPrice, orderStatus)
+VALUES ('2021112510002100', '2021-11-25 16:25:0', '10002', '1', '10000001', '明前龙井', '1', '299', 'false');
+insert into t_order(orderId, orderTime, userId, addressId, commodityId, commodityName, num, totalPrice, orderStatus)
+VALUES ('2021112510002100', '2021-11-25 16:25:0', '10002', '1', '10000001', '明前龙井', '1', '299.0F', 'false');
+insert into t_order(orderId, orderTime, userId, addressId, commodityId, commodityName, num, totalPrice, orderStatus)
+values ('2021112510002100', '2021-11-25 16:25:0', '10002', '1', '10000002', '金骏眉礼盒', '2', '339.98', 'false');
 # 创建地址表
 create table t_address
 (
-    aid     int unique primary key not null auto_increment,
-    uid     int                    not null,
-    name    varchar(32)            not null,
-    tel     varchar(12)            not null,
-    address varchar(255)           not null,
-    post    varchar(6)             not null
+    aid  int unique primary key not null auto_increment,
+    uid  int                    not null,
+    name varchar(32)            not null,
+    tel  varchar(12)            not null,
+    addr varchar(255)           not null,
+    post varchar(6)             not null
 );
 # 插入地址数据
-insert into t_address(uid, name, tel, address, post) VALUES ('10002','王洋','110','河南省焦作市博爱县','100100');
-insert into t_address(uid, name, tel, address, post) VALUES ('10002','王赛龙','120','河南省安阳市滑县','110110');
+insert into t_address(uid, name, tel, addr, post)
+VALUES ('10002', '王洋', '110', '河南省焦作市博爱县', '100100');
+insert into t_address(uid, name, tel, addr, post)
+VALUES ('10002', '王赛龙', '120', '河南省安阳市滑县', '110110');

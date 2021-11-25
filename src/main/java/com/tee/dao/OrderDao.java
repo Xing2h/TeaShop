@@ -23,6 +23,12 @@ public interface OrderDao {
     public List<Order> queryOrderByOrderId(String orderId);
 
     /**
+     * 通过用户id查询订单
+     * @param userId
+     * @return
+     */
+    public List<Order> queryOrderByUserId(String userId);
+    /**
      * 删除订单
      *
      * @param order

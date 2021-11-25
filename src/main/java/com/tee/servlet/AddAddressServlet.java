@@ -24,6 +24,7 @@ public class AddAddressServlet extends HttpServlet {
         String post = req.getParameter("post");
 
         Address newAddress = new Address(null,userid,name,tel,address,post);
+        System.out.println(newAddress.toString());
         addressService.createAddress(newAddress);
         resp.sendRedirect("pages/newAddress.jsp");
     }

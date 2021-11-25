@@ -2,43 +2,44 @@ package com.tee.pojo;
 
 public class Address {
     /**
-     * addressId   地址编号
-     * userId      用户编号
-     * recipient   收件人
-     * tel         电话
-     * address     地址
-     * postalCode  邮政编码
+     * aid      地址编号
+     * uid      用户编号
+     * name     收件人
+     * tel      电话
+     * addr     地址
+     * post     邮政编码
      */
 
-    private String addressId;
-    private String userId;
-    private String recipient;
+    private String aid;
+    private String uid;
+    private String name;
     private String tel;
-    private String address;
-    private String postalCode;
+    private String addr;
+    private String post;
 
-    public String getAddressId() {
-        return addressId;
+
+    public String getAid() {
+        return aid;
     }
 
-    public void setAddressId(String addressId) {
-        this.addressId = addressId;
+    public void setAid(String aid) {
+        this.aid = aid;
     }
 
-    public String getUserId() {
-        return userId;
+    public String getUid() {
+        return uid;
     }
 
-    public void setUserId(String userId) {
-        this.userId = userId;
+    public void setUid(String uid) {
+        this.uid = uid;
     }
 
-    public String getRecipient() {
-        return recipient;
+    public String getName() {
+        return name;
     }
 
-    public void setRecipient(String recipient) {
-        this.recipient = recipient;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getTel() {
@@ -49,39 +50,39 @@ public class Address {
         this.tel = tel;
     }
 
-    public String getAddress() {
-        return address;
+    public String getAddr() {
+        return addr;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public void setAddr(String addr) {
+        this.addr = addr;
     }
 
-    public String getPostalCode() {
-        return postalCode;
+    public String getPost() {
+        return post;
     }
 
-    public void setPostalCode(String postalCode) {
-        this.postalCode = postalCode;
+    public void setPost(String post) {
+        this.post = post;
     }
 
     public Address() {
     }
 
-    public Address(String addressId, String userId, String recipient, String tel, String address, String postalCode) {
-        this.addressId = addressId;
-        this.userId = userId;
-        this.recipient = recipient;
+    public Address(String aid, String uid, String name, String tel, String addr, String post) {
+        this.aid = aid;
+        this.uid = uid;
+        this.name = name;
         this.tel = tel;
-        this.address = address;
-        this.postalCode = postalCode;
+        this.addr = addr;
+        this.post = post;
     }
 
     @Override
     public String toString() {
-        return "收件人姓名：'" + recipient + '\'' +
-                ", 电话：'" + tel + '\'' +
-                ", 地址：'" + address + '\'' +
-                ", 邮政编码：'" + postalCode + '\'';
+        return " 姓名：" + name +
+                ", 电话：" + tel +
+                ", 地址：" + addr +
+                ", 邮政编码：" + post;
     }
 }

@@ -2,6 +2,9 @@ package com.tee.service;
 
 import com.tee.pojo.AdminUser;
 import com.tee.pojo.User;
+
+import java.util.List;
+
 /**
  * @author Xing
  * date 2021-11-21-11-55
@@ -32,33 +35,75 @@ public interface UserService {
 
     /**
      * 管理员登录
+     *
      * @param adminUser 要登录的管理员
-     * @return  返回null说明登录失败，其它为登录结果
+     * @return 返回null说明登录失败，其它为登录结果
      */
     public AdminUser loginAdminUser(AdminUser adminUser);
 
     /**
      * 注册管理员
+     *
      * @param adminUser 要注册的管理员
      */
     public void registAdminUser(AdminUser adminUser);
 
     /**
      * 检查管理预案是否存在
-     * @param username  要检查的管理员账号
-     * @return  返回false表示管理员不存在，可以再次注册；返回true表示该管理原账号不存在，不可以进行注册。
+     *
+     * @param username 要检查的管理员账号
+     * @return 返回false表示管理员不存在，可以再次注册；返回true表示该管理原账号不存在，不可以进行注册。
      */
     public boolean existAdminUser(String username);
 
     /**
      * 修改用户资料
+     *
      * @param user
      */
     public void modifyUserData(User user);
 
     /**
      * 修改管理员资料
+     *
      * @param adminUser
      */
     public void modifyAdminData(AdminUser adminUser);
+
+    /**
+     * 通过用户名查询用户
+     *
+     * @param userName
+     * @return
+     */
+    public User searchUserByUserName(String userName);
+
+    /**
+     * 通过用户id查询用户
+     *
+     * @param userId
+     * @return
+     */
+    public User searchUserByUserId(String userId);
+
+    /**
+     * 展示所有用户
+     *
+     * @return
+     */
+    public List<User> showAllUsers();
+
+    /**
+     * 修改用户密码
+     *
+     * @param password
+     */
+    public void modifyUserPassword(String id,String password);
+
+    /**
+     * 修改管理员密码
+     *
+     * @param password
+     */
+    public void modifyAdminPassword(String id,String password);
 }

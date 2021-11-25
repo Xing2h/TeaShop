@@ -250,8 +250,8 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                            aria-expanded="false">我的账户</a>
                         <ul class="dropdown-menu">
-                            <li><a href="persondata.jsp">我的信息</a></li>
-                            <li><a href="#">我的订单</a></li>
+                            <li><a href="credit.jsp">我的信息</a></li>
+                            <li><a href="order.jsp">我的订单</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -264,27 +264,27 @@
                 <h1>选择收件人信息</h1>
             </div>
         </div>
-        <form class="form-group" action="AddOrderServlet" method="post" style="margin: 0 auto;width: 500px;text-align: center;">
+        <form class="form-group" action="" method="post" style="margin: 0 auto;width: 500px;text-align: center;">
             <div class="col-sm-12 col-md-12 col-lg-12 col-" style="margin: 50px 0;">
-                <select class="form-control">
-                    <option>请选择收件人信息</option>
-                    <%
-                        User user = (User) request.getSession().getAttribute("user");
-                        AddressService addressService = new AddressServiceImpl();
-                        List<Address> list = addressService.searchAddressByUserId(user.getId());
-                        for (int i = 0; i < list.size(); i++) {
-                            out.print("<option id=\"" + list.get(i).getAddressId() + "\">" + list.get(i).toString() + "</option>");
-                        }
-                    %>
-                    <option>郑州</option>
-                    <option>北京</option>
-                    <option>上海</option>
-                    <option>武汉</option>
+                <select class="form-control" style="text-align: center;"
+                <option>请选择收件人信息</option>
+                <%
+                    User user = (User) request.getSession().getAttribute("user");
+                    AddressService addressService = new AddressServiceImpl();
+                    List<Address> list = addressService.searchAddressByUserId(user.getId());
+                    for (int i = 0; i < list.size(); i++) {
+                        System.out.println(list.get(i).toString());
+                        out.print("<option id=\"" + list.get(i).getAid() + "\">" + list.get(i).toString() + "</option>");
+                    }
+                %>
                 </select>
             </div>
             <button type="button" class="btn btn-default"><a href="newAddress.jsp"
                                                              style="text-decoration: none;">新建收件人</a></button>
-            <button type="submit" class="btn btn-danger">提交订单</button>
+            <button type="button" id="submit" class="btn btn-danger">提交订单</button>
+        </form>
+        <form action="../AddOrderServlet" method="post" id="form" style="width: 0;height: 0;visibility: hidden;">
+            <input type="text" id="aid" name="aid">
         </form>
         <%--    底部导航--%>
         <div class="container">
@@ -300,6 +300,7 @@
         </div>
     </div>
     <script>
+        //判断输入状态
         window.onload = function () {
             var l1 = document.getElementById("login");
             var l2 = document.getElementById("register");
@@ -320,6 +321,15 @@
                 l2.style.height = 0;
             }
         }
+        //获取提交选中地址的id
+        // $("select option:checked").attr("id");
+        // window.alert($("select option:checked").attr("id"));
+        $("#submit").click(function () {
+            // window.alert($("select option:checked").attr("id"));
+            var aid = $("select option:checked").attr("id");
+            document.getElementById("aid").value = aid;
+            $("#form").submit();
+        });
     </script>
 </div>
 </body>
