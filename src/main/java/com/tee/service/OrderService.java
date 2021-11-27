@@ -58,4 +58,22 @@ public interface OrderService {
      * @return
      */
     public String createOrderTime();
+
+    /**
+     * 展示所有订单
+     * @return
+     */
+    public List<Order> showAllOrder();
+
+    /**
+     * 查询所有订单号
+     * @return
+     */
+    public List<String> showAllOrderId();
+
+    /**
+     * 修改订单状态
+     * @param orderId
+     */
+    public void modifyOrderStatus(String orderId);
 }

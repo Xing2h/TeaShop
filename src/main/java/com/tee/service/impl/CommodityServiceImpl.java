@@ -13,12 +13,13 @@ import java.util.List;
  **/
 public class CommodityServiceImpl implements CommodityService {
     CommodityDao commodityDao = new CommodityDaoImpl();
+
     @Override
     public boolean existCommodity(String id) {
-        if (commodityDao.queryCommodityById(id)==null){
+        if (commodityDao.queryCommodityById(id) == null) {
             //commodityDao.queryCommodityById(id)为空表示没有查到该id，即该商品不存在，返回false
             return false;
-        }else{
+        } else {
             //查询到了商品，返回true，表示商品存在
             return true;
         }
@@ -42,5 +43,21 @@ public class CommodityServiceImpl implements CommodityService {
     @Override
     public Commodity searchForOneCommodity(String id) {
         return commodityDao.queryCommodityById(id);
+    }
+
+    @Override
+    public void modifyCommodity(Commodity commodity) {
+        commodityDao.modifyCommodity(commodity);
+    }
+
+    @Override
+    public void deleteOneCommodity(String id) {
+        commodityDao.deleteCommodity(id);
+    }
+
+    @Override
+    public String maxid() {
+        Commodity commodity = commodityDao.searchLastCommodity();
+        return commodity.getId();
     }
 }

@@ -46,7 +46,7 @@ create table t_commodity
     type           varchar(10)  not null,
     price          float        not null,
     num            int          not null,
-    salenum        int          not null,
+    salenum        int          ,
     origin         varchar(255) not null,
     productiondate datetime     not null,
     details        varchar(255)
@@ -73,6 +73,7 @@ insert into t_commodity(name, type, price, num, salenum, origin, productiondate,
 values ('太平猴魁猴魁', '绿茶', 9560.50, 325, 175, '安徽省黄山市黄山区', '2021-3-28', '太平猴魁，中国传统名茶，中国历史名茶之一，属于绿茶类尖茶，为尖茶之极品，久享盛名。');
 insert into t_commodity(name, type, price, num, salenum, origin, productiondate, details)
 values ('武夷岩茶', '青茶', 918, 1532, 378, '武夷山', '2021-4-18', '金秋特惠，好茶相伴。');
+# 修改商品属性
 # 创建购物车
 # 需要的数据有：购买者的用户id、商品id、商品数量、商品价格
 create table t_cart
@@ -109,7 +110,7 @@ VALUES ('20211125123400', '2021-05-18 00:00:00', '10002', '2', '10000001', '明�
 insert into t_order(orderId, orderTime, userId, addressId, commodityId, commodityName, num, totalPrice, orderStatus)
 VALUES ('2021112510002100', '2021-11-25 16:25:0', '10002', '1', '10000001', '明前龙井', '1', '299', 'false');
 insert into t_order(orderId, orderTime, userId, addressId, commodityId, commodityName, num, totalPrice, orderStatus)
-VALUES ('2021112510002100', '2021-11-25 16:25:0', '10002', '1', '10000001', '明前龙井', '1', '299.0F', 'false');
+VALUES ('2021112510002100', '2021-11-25 16:25:0', '10002', '1', '10000001', '明前龙井', '1', '299.0', 'false');
 insert into t_order(orderId, orderTime, userId, addressId, commodityId, commodityName, num, totalPrice, orderStatus)
 values ('2021112510002100', '2021-11-25 16:25:0', '10002', '1', '10000002', '金骏眉礼盒', '2', '339.98', 'false');
 # 创建地址表
@@ -127,3 +128,12 @@ insert into t_address(uid, name, tel, addr, post)
 VALUES ('10002', '王洋', '110', '河南省焦作市博爱县', '100100');
 insert into t_address(uid, name, tel, addr, post)
 VALUES ('10002', '王赛龙', '120', '河南省安阳市滑县', '110110');
+# 创建会话表
+create table t_message(
+    messageId   int auto_increment unique primary key,
+    orderId     varchar(255) not null ,
+    id          int not null ,
+    message     varchar(255)
+);
+# 插入数据
+# insert into t_message(messageid, orderid, id, message) values ();

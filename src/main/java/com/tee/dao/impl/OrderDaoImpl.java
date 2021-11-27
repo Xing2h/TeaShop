@@ -36,4 +36,22 @@ public class OrderDaoImpl extends BaseDao implements OrderDao {
         String sql = "insert into t_order(orderId,orderTime,userId,addressId,commodityId,commodityName,num,totalPrice,orderStatus)values(?,?,?,?,?,?,?,?,?)";
         return update(sql, order.getOrderId(), order.getOrderTime(), order.getUserId(), order.getAddressId(), order.getCommodityId(), order.getCommodityName(), order.getNum(), order.getTotalPrice(), order.getOrderStatus());
     }
+
+    @Override
+    public List<Order> showAllOrder() {
+        String sql = "select * from t_order";
+        return queryForList(Order.class,sql);
+    }
+
+    @Override
+    public List<String> searchOrderId() {
+        String sql ="select distinct orderId from t_order";
+        return queryForList(String.class,sql);
+    }
+
+    @Override
+    public int modifyOrderStatus(String orderId) {
+        String sql = "update t_order set orderStatus='true' where orderId=?";
+        return update(sql,orderId);
+    }
 }

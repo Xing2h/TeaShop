@@ -51,4 +51,19 @@ public class OrderServiceImpl implements OrderService {
         String time = String.valueOf(calendar.get(Calendar.YEAR))+"-"+String.valueOf(calendar.get(Calendar.MONTH)+1)+"-"+String.valueOf(calendar.get(Calendar.DAY_OF_MONTH)+" "+String.valueOf(calendar.get(Calendar.HOUR_OF_DAY))+":"+String.valueOf(calendar.get(Calendar.MINUTE))+":"+String.valueOf(calendar.get(Calendar.SECOND)));
         return time;
     }
+
+    @Override
+    public List<Order> showAllOrder() {
+        return orderDao.showAllOrder();
+    }
+
+    @Override
+    public List<String> showAllOrderId() {
+        return orderDao.searchOrderId();
+    }
+
+    @Override
+    public void modifyOrderStatus(String orderId) {
+        orderDao.modifyOrderStatus(orderId);
+    }
 }

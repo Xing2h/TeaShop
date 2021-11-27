@@ -43,4 +43,23 @@ public interface OrderDao {
      * @return
      */
     public int createOrder(Order order);
+
+    /**
+     * 展示所有订单
+     * @return
+     */
+    public List<Order> showAllOrder();
+
+    /**
+     * 获取所有订单号
+     * @return
+     */
+    public List<String> searchOrderId();
+
+    /**
+     * 修改订单完成状态
+     * @param orderId
+     * @return
+     */
+    public int modifyOrderStatus(String orderId);
 }

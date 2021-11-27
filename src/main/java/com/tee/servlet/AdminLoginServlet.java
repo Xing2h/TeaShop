@@ -26,7 +26,7 @@ public class AdminLoginServlet extends HttpServlet {
         AdminUser loginUser = userService.loginAdminUser(new AdminUser(null, username, password, null, null));
         if (loginUser == null) {
             //登陆失败
-            resp.sendRedirect("pages/admin-log.jsp");
+            resp.sendRedirect("pages/control/admin.jsp");
         } else {
             //登陆成功
             System.out.println(loginUser.toString());

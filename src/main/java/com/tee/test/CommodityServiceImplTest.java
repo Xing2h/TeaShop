@@ -23,6 +23,8 @@ public class CommodityServiceImplTest {
 
     @Test
     public void createCommodity() {
+        commodityService.createCommodity(new Commodity(null,"111","type",1111,111,0,"origin","2021-04-18 00:00:00","details"));
+
     }
 
     @Test
@@ -39,5 +41,16 @@ public class CommodityServiceImplTest {
 
     @Test
     public void searchForOneCommodity() {
+    }
+
+    @Test
+    public void modifyCommodity() {
+        Commodity commodity = new Commodity("10000001","明前龙井","绿茶",299,10001,30,"浙江省杭州市","2021-5-18","2021新茶，明前绿茶，安吉绿茶，茉莉花茶3大茗茶组合装。");
+        commodityService.modifyCommodity(commodity);
+    }
+
+    @Test
+    public void searchCommodityId(){
+        System.out.println(commodityService.maxid());
     }
 }

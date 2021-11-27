@@ -324,12 +324,12 @@
                     </ul>
                 </li>
             </ul>
-            <form class="navbar-form navbar-left">
-                <div class="form-group">
-                    <input type="text" class="form-control" placeholder="搜索商品">
-                </div>
-                <button type="submit" class="btn btn-default">搜索</button>
-            </form>
+<%--            <form class="navbar-form navbar-left">--%>
+<%--                <div class="form-group">--%>
+<%--                    <input type="text" class="form-control" placeholder="搜索商品">--%>
+<%--                </div>--%>
+<%--                <button type="submit" class="btn btn-default">搜索</button>--%>
+<%--            </form>--%>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="../cart.jsp">购物车</a></li>
                 <li id="login"><a href="../login.html">登录</a></li>
@@ -413,7 +413,7 @@
         <%--            </p>--%>
         <%--        </footer>--%>
     </div>
-    <div class="container" style="position: absolute;bottom: 0;margin: 0 0 0 375px">
+    <div class="container">
         <hr class="zw">
         <footer>
             <p class="pull-right">

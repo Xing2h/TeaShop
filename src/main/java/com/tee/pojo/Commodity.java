@@ -119,7 +119,7 @@ public class Commodity {
     public Commodity() {
     }
 
-    public Commodity(String id, String type, String name, float price, int num, int salenum, String origin, String productiondate, String details, String imgpath, String url) {
+    public Commodity(String id, String type, String name, float price, int num, int salenum, String origin, String productiondate, String details) {
         this.id = id;
         this.type = type;
         this.name = name;

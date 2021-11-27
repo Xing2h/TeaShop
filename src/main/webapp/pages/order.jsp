@@ -248,12 +248,12 @@
                         </ul>
                     </li>
                 </ul>
-                <form class="navbar-form navbar-left search">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="搜索商品">
-                    </div>
-                    <button type="submit" class="btn btn-default">搜索</button>
-                </form>
+<%--                <form class="navbar-form navbar-left search">--%>
+<%--                    <div class="form-group">--%>
+<%--                        <input type="text" class="form-control" placeholder="搜索商品">--%>
+<%--                    </div>--%>
+<%--                    <button type="submit" class="btn btn-default">搜索</button>--%>
+<%--                </form>--%>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="cart.jsp">购物车</a></li>
                     <li id="login"><a href="login.html">登录</a></li>
@@ -313,7 +313,7 @@
                                     "         </td>\n" +
                                     "         <td>收件人：" + address.getName() + "</td>\n" +
                                     "            <td>订单状态:" + status + "</td>\n" +
-                                    "            <td>订单反馈</td>\n" +
+                                    "            <td><a href=\"#\" id=\""+list.get(i).getOrderId()+"\" style=\"text-decoration:none;\">订单反馈</a></td>\n" +
                                     "     </tr>\n" +
                                     "</tbody>"
                             );
@@ -351,17 +351,18 @@
             </table>
         </div>
     </div>
-    <div class="container" style="position: absolute;bottom: 0;margin: 0 0 0 375px">
-        <hr class="zw">
-        <footer>
-            <p class="pull-right">
-                <a href="#">返回顶部</a>
-            </p>
-            <p class="pull-left">
-                © 2021 Company, Inc.
-            </p>
-        </footer>
-    </div>
+</div>
+<!--底部信息栏-->
+<div class="container">
+    <hr class="zw">
+    <footer>
+        <p class="pull-right">
+            <a href="#">返回顶部</a>
+        </p>
+        <p class="pull-left">
+            © 2021 Company, Inc.
+        </p>
+    </footer>
 </div>
 <script>
     window.onload = function () {
@@ -381,6 +382,11 @@
             l2.style.height = 0;
         }
     }
+    $('td a').click(function () {
+        // alert($(this).attr('id'))
+        var oid = $(this).attr('id');
+        window.location.href="message.jsp?oid="+oid;
+    });
 </script>
 </body>
 </html>

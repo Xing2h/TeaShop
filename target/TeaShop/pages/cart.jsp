@@ -237,12 +237,12 @@
                         </ul>
                     </li>
                 </ul>
-                <form class="navbar-form navbar-left search">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="搜索商品">
-                    </div>
-                    <button type="submit" class="btn btn-default">搜索</button>
-                </form>
+<%--                <form class="navbar-form navbar-left search">--%>
+<%--                    <div class="form-group">--%>
+<%--                        <input type="text" class="form-control" placeholder="搜索商品">--%>
+<%--                    </div>--%>
+<%--                    <button type="submit" class="btn btn-default">搜索</button>--%>
+<%--                </form>--%>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="cart.jsp">购物车</a></li>
                     <li id="login"><a href="login.html">登录</a></li>
@@ -323,17 +323,18 @@
         </div>
         <button class="btn btn-danger" type="submit">提交订单</button>
     </form>
-    <div class="container">
-        <hr class="zw">
-        <footer>
-            <p class="pull-right">
-                <a href="#">返回顶部</a>
-            </p>
-            <p class="pull-left">
-                © 2021 Company, Inc.
-            </p>
-        </footer>
-    </div>
+</div>
+<!--底部信息栏-->
+<div class="container">
+    <hr class="zw">
+    <footer>
+        <p class="pull-right">
+            <a href="#">返回顶部</a>
+        </p>
+        <p class="pull-left">
+            © 2021 Company, Inc.
+        </p>
+    </footer>
 </div>
 <form action="../DelCartServlet" id="form" method="post" style="visibility: hidden;width: 0;height: 0;">
     <input type="text" id="commid" name="commid">

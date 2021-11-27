@@ -72,15 +72,15 @@
         <url-pattern>/DataModifyServlet</url-pattern>
     </servlet-mapping>
     <!--  新建收件人信息-->
-  <servlet>
-    <servlet-name>AddAddressServlet</servlet-name>
-    <servlet-class>com.tee.servlet.AddAddressServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>AddAddressServlet</servlet-name>
-    <url-pattern>/AddAddressServlet</url-pattern>
-  </servlet-mapping>
-<!--    新建订单-->
+    <servlet>
+        <servlet-name>AddAddressServlet</servlet-name>
+        <servlet-class>com.tee.servlet.AddAddressServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddAddressServlet</servlet-name>
+        <url-pattern>/AddAddressServlet</url-pattern>
+    </servlet-mapping>
+    <!--    新建订单-->
     <servlet>
         <servlet-name>AddOrderServlet</servlet-name>
         <servlet-class>com.tee.servlet.AddOrderServlet</servlet-class>
@@ -89,7 +89,7 @@
         <servlet-name>AddOrderServlet</servlet-name>
         <url-pattern>/AddOrderServlet</url-pattern>
     </servlet-mapping>
-<!--    修改用户密码-->
+    <!--    修改用户密码-->
     <servlet>
         <servlet-name>ModifyPasswordServlet</servlet-name>
         <servlet-class>com.tee.servlet.ModifyPasswordServlet</servlet-class>
@@ -98,7 +98,7 @@
         <servlet-name>ModifyPasswordServlet</servlet-name>
         <url-pattern>/ModifyPasswordServlet</url-pattern>
     </servlet-mapping>
-<!--    修改管理员密码-->
+    <!--    修改管理员密码-->
     <servlet>
         <servlet-name>ModifyAdminPasswordServlet</servlet-name>
         <servlet-class>com.tee.servlet.ModifyAdminPasswordServlet</servlet-class>
@@ -107,7 +107,7 @@
         <servlet-name>ModifyAdminPasswordServlet</servlet-name>
         <url-pattern>/ModifyAdminPasswordServlet</url-pattern>
     </servlet-mapping>
-<!--    修改管理员信息-->
+    <!--    修改管理员信息-->
     <servlet>
         <servlet-name>AdminDataModifyServlet</servlet-name>
         <servlet-class>com.tee.servlet.AdminDataModifyServlet</servlet-class>
@@ -115,5 +115,59 @@
     <servlet-mapping>
         <servlet-name>AdminDataModifyServlet</servlet-name>
         <url-pattern>/AdminDataModifyServlet</url-pattern>
+    </servlet-mapping>
+    <!--    修改产品信息-->
+    <servlet>
+        <servlet-name>CommodityModifyServlet</servlet-name>
+        <servlet-class>com.tee.servlet.CommodityModifyServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CommodityModifyServlet</servlet-name>
+        <url-pattern>/CommodityModifyServlet</url-pattern>
+    </servlet-mapping>
+    <!--    删除商品-->
+    <servlet>
+        <servlet-name>DelCommodityServlet</servlet-name>
+        <servlet-class>com.tee.servlet.DelCommodityServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DelCommodityServlet</servlet-name>
+        <url-pattern>/DelCommodityServlet</url-pattern>
+    </servlet-mapping>
+    <!--    订单状态修改-->
+    <servlet>
+        <servlet-name>OrderStatusModifyServlet</servlet-name>
+        <servlet-class>com.tee.servlet.OrderStatusModifyServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>OrderStatusModifyServlet</servlet-name>
+        <url-pattern>/OrderStatusModifyServlet</url-pattern>
+    </servlet-mapping>
+    <!--    添加商品-->
+    <servlet>
+        <servlet-name>AddCommodityServlet</servlet-name>
+        <servlet-class>com.tee.servlet.AddCommodityServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddCommodityServlet</servlet-name>
+        <url-pattern>/AddCommodityServlet</url-pattern>
+    </servlet-mapping>
+    <!--    新增会话-->
+    <servlet>
+        <servlet-name>AddMessageServlet</servlet-name>
+        <servlet-class>com.tee.servlet.AddMessageServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddMessageServlet</servlet-name>
+        <url-pattern>/AddMessageServlet</url-pattern>
+    </servlet-mapping>
+    <!--    管理员回复会话-->
+    <servlet>
+        <servlet-name>AddAdminMessageServlet</servlet-name>
+        <servlet-class>com.tee.servlet.AddAdminMessageServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddAdminMessageServlet</servlet-name>
+        <url-pattern>/AddAdminMessageServlet</url-pattern>
     </servlet-mapping>
 </web-app>

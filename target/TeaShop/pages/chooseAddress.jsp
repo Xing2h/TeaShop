@@ -236,12 +236,12 @@
                         </ul>
                     </li>
                 </ul>
-                <form class="navbar-form navbar-left search">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="搜索商品">
-                    </div>
-                    <button type="submit" class="btn btn-default">搜索</button>
-                </form>
+<%--                <form class="navbar-form navbar-left search">--%>
+<%--                    <div class="form-group">--%>
+<%--                        <input type="text" class="form-control" placeholder="搜索商品">--%>
+<%--                    </div>--%>
+<%--                    <button type="submit" class="btn btn-default">搜索</button>--%>
+<%--                </form>--%>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="cart.jsp">购物车</a></li>
                     <li id="login"><a href="login.html">登录</a></li>
@@ -266,7 +266,7 @@
         </div>
         <form class="form-group" action="" method="post" style="margin: 0 auto;width: 500px;text-align: center;">
             <div class="col-sm-12 col-md-12 col-lg-12 col-" style="margin: 50px 0;">
-                <select class="form-control" style="text-align: center;"
+                <select class="form-control" style="text-align: center;">
                 <option>请选择收件人信息</option>
                 <%
                     User user = (User) request.getSession().getAttribute("user");

@@ -45,4 +45,8 @@ public class OrderServiceImplTest {
             System.out.println(list.get(i).getOrderId());
         }
     }
+    @Test
+    public void modifyOrderStatus(){
+        orderDao.modifyOrderStatus("20211125123400");
+    }
 }

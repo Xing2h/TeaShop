@@ -235,6 +235,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li><a href="pages/commodities/10000008.jsp">太平猴魁</a></li>
+                    <li><a href="pages/commodities/11111111.jsp"></a></li>
                     <%--                    <li><a href="#">礼品</a></li>--%>
                     <li class="dropdown">
                         <a data-target class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
@@ -249,14 +250,15 @@
                         </ul>
                     </li>
                 </ul>
-                <form class="navbar-form navbar-left search">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="搜索商品">
-                    </div>
-                    <button type="submit" class="btn btn-default">搜索</button>
-                </form>
+<%--                <form class="navbar-form navbar-left search">--%>
+<%--                    <div class="form-group">--%>
+<%--                        <input type="text" class="form-control" placeholder="搜索商品">--%>
+<%--                    </div>--%>
+<%--                    <button type="submit" class="btn btn-default">搜索</button>--%>
+<%--                </form>--%>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="pages/cart.jsp">购物车</a></li>
+<%--                    <li><a href="pages/control/admin.jsp">后台</a></li>--%>
                     <li id="login"><a href="pages/login.html">登录</a></li>
                     <li id="register"><a href="pages/register.html">注册</a></li>
                     <li class="dropdown d2" id="user">
