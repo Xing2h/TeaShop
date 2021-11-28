@@ -30,7 +30,7 @@ public class AddCommodityServlet extends HttpServlet {
         String details = req.getParameter("details");
         //把信息存入数据库
         CommodityService commodityService = new CommodityServiceImpl();
-        commodityService.createCommodity(new Commodity(null, name, type, Float.valueOf(price), Integer.parseInt(num), 0, origin, productiondate, details));
+        commodityService.createCommodity(new Commodity(null, type, name, Float.valueOf(price), Integer.parseInt(num), 0, origin, productiondate, details));
 //        生成网页
         //获取到刚插入的商品编号
         String id = commodityService.maxid();

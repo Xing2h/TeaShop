@@ -214,7 +214,7 @@
 <div class="page-content">
     <div class="page-header">
         <div class="container">
-            <h1>修改商品信息</h1>
+            <h1>添加商品</h1>
         </div>
     </div>
     <div class="container" style="margin-top: 50px;">

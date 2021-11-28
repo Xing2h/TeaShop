@@ -70,7 +70,7 @@ values ('2021中秋茶礼', '红茶', 1999, 500, 150, '武夷山市', '2021-6-17
 insert into t_commodity(name, type, price, num, salenum, origin, productiondate, details)
 values ('明前高山云雾碧螺春', '绿茶', 11932.00, 99, 101, '洞庭湖', '2021-4-1', '洞庭山有茶，微似岕而细，味甚甘香，俗称‘吓煞人’，产碧螺峰者尤佳，名‘ 碧螺春’”。');
 insert into t_commodity(name, type, price, num, salenum, origin, productiondate, details)
-values ('太平猴魁猴魁', '绿茶', 9560.50, 325, 175, '安徽省黄山市黄山区', '2021-3-28', '太平猴魁，中国传统名茶，中国历史名茶之一，属于绿茶类尖茶，为尖茶之极品，久享盛名。');
+values ('太平猴魁', '绿茶', 9560.50, 325, 175, '安徽省黄山市黄山区', '2021-3-28', '太平猴魁，中国传统名茶，中国历史名茶之一，属于绿茶类尖茶，为尖茶之极品，久享盛名。');
 insert into t_commodity(name, type, price, num, salenum, origin, productiondate, details)
 values ('武夷岩茶', '青茶', 918, 1532, 378, '武夷山', '2021-4-18', '金秋特惠，好茶相伴。');
 # 修改商品属性

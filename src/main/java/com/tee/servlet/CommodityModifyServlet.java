@@ -22,7 +22,7 @@ public class CommodityModifyServlet extends HttpServlet {
         String  origin= req.getParameter("origin");
         String  productiondate= req.getParameter("productiondate");
         String  details= req.getParameter("details");
-        Commodity commodity = new Commodity(id,name,type,price,num,0,origin,productiondate,details);
+        Commodity commodity = new Commodity(id,type,name,price,num,0,origin,productiondate,details);
         System.out.println(commodity.toString());
         CommodityService commodityService = new CommodityServiceImpl();
         commodityService.modifyCommodity(commodity);
